@@ -26,6 +26,20 @@ SECRET_KEY = 'django-insecure-vw8cgtx%2+!0che3te%dk(scaefs$xt1c@2wg%7lm^fi889u+0
 DEBUG = True
 
 ALLOWED_HOSTS = []
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "templates"],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+        },
+    },
+]
 
 
 # Application definition
